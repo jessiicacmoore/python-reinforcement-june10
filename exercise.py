@@ -126,22 +126,21 @@ dict = {
 }
 
 
-results = dict['response']['results']
+results = dict["response"]["results"]
 
 for article in results:
-    article['views'] = 0
+    article["views"] = 0
+
 
 def read_article():
     results_count = len(results)
     rand_index = randint(0, results_count - 1)
-    results[rand_index]['views'] += 1
+    results[rand_index]["views"] += 1
 
 
 def display_views():
     for article in results:
-        print(
-            f"\n{article['webTitle']}\nread {article['views']} times"
-        )
+        print(f"\n{article['webTitle']}\nread {article['views']} times")
 
 
 read_article()
